@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src", "tests"]
+
+[project]
+name = "isyntax-deidentifier"
+version = "1.0.0"
+requires-python = ">=3.10"
+
+dependencies = [
+    "lxml >= 5.0.0"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest"
+]
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
